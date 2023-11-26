@@ -9,7 +9,7 @@
 
   <groupId>io.github.mavenplugins</groupId>
   <artifactId>artifact-spy-plugin</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Artifact Spy Plugin</name>
@@ -39,7 +39,7 @@
   <scm>
     <connection>scm:git:https://github.com/mavenplugins/artifact-spy-plugin.git</connection>
     <url>https://github.com/mavenplugins/artifact-spy-plugin</url>
-    <tag>v1.0.7</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
