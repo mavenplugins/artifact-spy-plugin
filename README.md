@@ -1,6 +1,8 @@
 Artifact Spy Plugin
 ===================
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.itemis.maven.plugins/artifact-spy-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.itemis.maven.plugins/artifact-spy-plugin)
+[![Eclipse Public License](https://img.shields.io/github/license/mavenplugins/artifact-spy-plugin?label=License)](./LICENSE)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.mavenplugins/artifact-spy-plugin)
+[![CI](https://github.com/mavenplugins/artifact-spy-plugin/actions/workflows/build_and_deploy.yml/badge.svg)](https://github.com/mavenplugins/artifact-spy-plugin/actions/workflows/build_and_deploy.yml)
 
 The purpose of this plugin is to spy out the artifacts that are produced by a project build.
 It serializes the project artifact and all attached artifacts into a properties file with the following format:
@@ -20,7 +22,7 @@ Sample usage
         <plugins>
           ...
           <plugin>
-            <groupId>com.itemis.maven.plugins</groupId>
+            <groupId>io.github.mavenplugins</groupId>
             <artifactId>artifact-spy-plugin</artifactId>
             <version>${version.artifact-spy-plugin}</version>
             <executions>
