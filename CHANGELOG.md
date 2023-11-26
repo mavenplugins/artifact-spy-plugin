@@ -71,10 +71,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Summary
 - No functional changes
-- Fix project URL in POM only
+- Fix project URL and improve developer node in POM only
 
 ### Updates
 - pom.xml:
+  - improve developer node
   - fix project URL
 
 
@@ -106,6 +107,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - This is just a dummy placeholder to make the parser of GHCICD/release-notes-from-changelog@v1 happy!
 -->
 
-[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.7..HEAD
-[1.0.7]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.7
+[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.7..HEAD
+[1.0.7]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.6..v1.0.7
 [1.0.6]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.6
