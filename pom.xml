@@ -14,7 +14,7 @@
 
   <name>Artifact Spy Plugin</name>
   <description>A small Maven plugin that spies out all the artifacts that are produced by a Maven build.</description>
-  <url>https://github.com/shillner/artifact-spy-plugin</url>
+  <url>https://github.com/mavenplugins/artifact-spy-plugin</url>
   <inceptionYear>2016</inceptionYear>
 
   <developers>
@@ -27,14 +27,12 @@
     </developer>
     <developer>
       <id>mavenplugins</id>
-      <name>GitHub mavenplugins</name>
+      <!-- Let Maven Central Search show 'Public Project' as known contributors tag -->
+      <name>Public Project</name>
+      <url>https://github.com/mavenplugins/unleash-maven-plugin/graphs/contributors</url>
       <organization>mavenplugins</organization>
       <organizationUrl>https://github.com/mavenplugins/</organizationUrl>
       <timezone>1</timezone>
-    </developer>
-    <developer>
-      <id>Developers</id>
-      <url>https://github.com/mavenplugins/unleash-maven-plugin/graphs/contributors</url>
     </developer>
   </developers>
 

@@ -65,6 +65,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - TBD
 
 
+## [1.0.7]
+<!-- !!! Align version in badge URLs as well !!! -->
+[![1.0.7 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.7)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.7)
+
+### Summary
+- No functional changes
+- Fix project URL in POM only
+
+### Updates
+- pom.xml:
+  - fix project URL
+
+
 ## [1.0.6]
 <!-- !!! Align version in badge URLs as well !!! -->
 [![1.0.6 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.6)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.6)
@@ -74,7 +87,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Codewise identical with `com.itemis.maven.plugins:artifact-spy-plugin:1.0.6`<br>No more features nor changes
 - Released to Maven Central
 
-## Updates
+### Updates
 - pom.xml:
   - update parent pom reference
   - update groupId to io.github.mavenplugins
@@ -93,5 +106,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - This is just a dummy placeholder to make the parser of GHCICD/release-notes-from-changelog@v1 happy!
 -->
 
-[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.6..HEAD
+[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.7..HEAD
+[1.0.7]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.7
 [1.0.6]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.6
