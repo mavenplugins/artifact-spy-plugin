@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.itemis</groupId>
+    <groupId>io.github.mavenplugins</groupId>
     <artifactId>org-parent</artifactId>
-    <version>3</version>
+    <version>1</version>
   </parent>
 
-  <groupId>com.itemis.maven.plugins</groupId>
+  <groupId>io.github.mavenplugins</groupId>
   <artifactId>artifact-spy-plugin</artifactId>
   <version>1.0.7-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
@@ -25,17 +25,28 @@
       <organizationUrl>https://itemis.com/</organizationUrl>
       <timezone>1</timezone>
     </developer>
+    <developer>
+      <id>mavenplugins</id>
+      <name>GitHub mavenplugins</name>
+      <organization>mavenplugins</organization>
+      <organizationUrl>https://github.com/mavenplugins/</organizationUrl>
+      <timezone>1</timezone>
+    </developer>
+    <developer>
+      <id>Developers</id>
+      <url>https://github.com/mavenplugins/unleash-maven-plugin/graphs/contributors</url>
+    </developer>
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/shillner/artifact-spy-plugin.git</connection>
-    <url>https://github.com/shillner/artifact-spy-plugin</url>
+    <connection>scm:git:https://github.com/mavenplugins/artifact-spy-plugin.git</connection>
+    <url>https://github.com/mavenplugins/artifact-spy-plugin</url>
     <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/shillner/artifact-spy-plugin/issues</url>
+    <url>https://github.com/mavenplugins/artifact-spy-plugin/issues</url>
   </issueManagement>
 
   <properties>
@@ -90,25 +101,4 @@
     </plugins>
   </build>
 
-  <profiles>
-    <profile>
-      <id>disable-java8-doclint</id>
-      <activation>
-        <jdk>[1.8,)</jdk>
-      </activation>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-javadoc-plugin</artifactId>
-              <configuration>
-                <additionalparam>-Xdoclint:none</additionalparam>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-  </profiles>
 </project>
