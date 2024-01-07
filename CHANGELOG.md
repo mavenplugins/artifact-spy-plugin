@@ -61,8 +61,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-### Changes
-- TBD
+### Updates
+- pom.xml:
+  - fix developer node contributors URL
 
 
 ## [1.0.7]
