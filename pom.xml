@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>io.github.mavenplugins</groupId>
     <artifactId>org-parent</artifactId>
-    <version>1</version>
+    <version>11</version>
+    <relativePath></relativePath>
   </parent>
 
-  <groupId>io.github.mavenplugins</groupId>
   <artifactId>artifact-spy-plugin</artifactId>
   <version>1.0.8-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
@@ -19,19 +21,19 @@
 
   <developers>
     <developer>
-      <id>shillner</id>
-      <name>Stanley Hillner</name>
-      <organization>itemis AG</organization>
-      <organizationUrl>https://itemis.com/</organizationUrl>
-      <timezone>1</timezone>
-    </developer>
-    <developer>
       <id>mavenplugins</id>
       <!-- Let Maven Central Search show 'Public Project' as known contributors tag -->
       <name>Public Project</name>
       <url>https://github.com/mavenplugins/artifact-spy-plugin/graphs/contributors</url>
       <organization>mavenplugins</organization>
       <organizationUrl>https://github.com/mavenplugins/</organizationUrl>
+      <timezone>1</timezone>
+    </developer>
+    <developer>
+      <id>shillner</id>
+      <name>Stanley Hillner</name>
+      <organization>itemis AG</organization>
+      <organizationUrl>https://itemis.com/</organizationUrl>
       <timezone>1</timezone>
     </developer>
   </developers>
@@ -58,6 +60,18 @@
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-core</artifactId>
       <version>${version.maven}</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <!-- This exclusion is key to comply with the m2e embedded implementation at runtime -->
+          <groupId>org.apache.maven</groupId>
+          <artifactId>maven-resolver-provider</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.maven.plugin-tools</groupId>
+          <artifactId>maven-plugin-annotations</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
