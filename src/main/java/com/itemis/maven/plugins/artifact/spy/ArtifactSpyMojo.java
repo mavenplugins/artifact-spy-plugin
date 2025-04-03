@@ -10,7 +10,6 @@ import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugins.annotations.Component;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -23,7 +22,6 @@ import org.eclipse.aether.artifact.DefaultArtifact;
  * The Mojo should be bound to a late build phase in order to detect all artifacts produced by the build. By default it
  * is bound to the verify phase.<br>
  * <br>
- *
  * The properties will have the following format:
  * <ul>
  * <li><b>key: </b>artifact coordinates</li>
@@ -35,7 +33,10 @@ import org.eclipse.aether.artifact.DefaultArtifact;
  */
 @Mojo(name = "spy", defaultPhase = LifecyclePhase.VERIFY)
 public class ArtifactSpyMojo extends AbstractMojo {
-  @Component
+
+  private static final String LOG_PREFIX = "=== ArtifactSpy: ";
+
+  @Parameter(readonly = true, defaultValue = "${project}")
   private MavenProject project;
 
   /**
@@ -71,23 +72,38 @@ public class ArtifactSpyMojo extends AbstractMojo {
   }
 
   private void addPomArtifact(Properties props) {
-    props.setProperty(
-        new DefaultArtifact(this.project.getGroupId(), this.project.getArtifactId(), "pom", this.project.getVersion())
-            .toString(),
-        getProjectRelativePath(this.project.getFile()));
+    String key = new DefaultArtifact(this.project.getGroupId(), this.project.getArtifactId(), "pom",
+        this.project.getVersion()).toString();
+    String relativeFilePath = getProjectRelativePath(this.project.getFile());
+    props.setProperty(key, relativeFilePath);
+    getLog().info(LOG_PREFIX + "addPomArtifact: " + key + ", file=" + relativeFilePath);
   }
 
   private void addProjectArtifact(Properties props) {
+    boolean isPOMPackagingProject = "pom".equalsIgnoreCase(this.project.getPackaging());
     Artifact projectArtifact = this.project.getArtifact();
+    String key = RepositoryUtils.toArtifact(projectArtifact).toString();
     if (projectArtifact.getFile() != null && projectArtifact.getFile().isFile()) {
-      props.setProperty(RepositoryUtils.toArtifact(projectArtifact).toString(),
-          getProjectRelativePath(projectArtifact.getFile()));
+      String relativeFilePath = getProjectRelativePath(projectArtifact.getFile());
+      if (isPOMPackagingProject) {
+        getLog().warn(LOG_PREFIX + "addProjectArtifact: IGNORED POM project artifact file=" + relativeFilePath);
+        getLog().warn(LOG_PREFIX
+            + "!!! Please check this POM or its parent POM(s) for a misconfiguration building this project artifact within a POM type project !!!");
+      } else {
+        props.setProperty(key, relativeFilePath);
+        getLog().info(LOG_PREFIX + "addProjectArtifact: " + key + ", file=" + relativeFilePath);
+      }
+    } else if (!isPOMPackagingProject) {
+      getLog().warn(LOG_PREFIX + "addProjectArtifact: " + key + " - NO file");
     }
   }
 
   private void addAttachedArtifacts(Properties props) {
     for (Artifact a : this.project.getAttachedArtifacts()) {
-      props.setProperty(RepositoryUtils.toArtifact(a).toString(), getProjectRelativePath(a.getFile()));
+      String key = RepositoryUtils.toArtifact(a).toString();
+      String relativeFilePath = getProjectRelativePath(a.getFile());
+      props.setProperty(key, relativeFilePath);
+      getLog().info(LOG_PREFIX + "addAttachedArtifacts: " + key + ", file=" + relativeFilePath);
     }
   }
 

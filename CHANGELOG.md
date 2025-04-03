@@ -40,30 +40,66 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 <!--
 ## [Unreleased]
 
-### Additions
+### 🚨 Removed
 - TBD
 
-### Changes
+### 💥 Breaking
 - TBD
 
-### Deprecated
+### 📢 Deprecated
 - TBD
 
-###	Removals
+### 🚀 New Features
 - TBD
 
-### Fixes
+### 🐛 Fixes
 - TBD
 
-###	Security
+### ✨ Improvements
+- TBD
+
+### 🔧 Internal Changes
+- TBD
+
+### 🚦 Tests
+- TBD
+
+### 📦 Updates
+- TBD
+
+### 🔒 Security
+- TBD
+
+### 📝 Documentation Updates
 - TBD
 -->
 
 ## [Unreleased]
 
-### Updates
+### 📦 Updates
+- TBD
+
+
+## [1.0.8]
+<!-- !!! Align version in badge URLs as well !!! -->
+[![1.0.8 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.8)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.8)
+
+### Summary
+- Fix overriding POM artifact with a file built in a POM type project
+- Add logging of any artifact added
+
+### 🐛 Fixes
+- Fix overriding POM artifact with a file built in a POM type project
+
+### ✨ Improvements
+- Add logging of any artifact being added
+- Log warning in case of POM type project adding a built artifact as a not explicitly attached project artifact
+
+### 📦 Updates
 - pom.xml:
   - fix developer node contributors URL
+  - refer to recent parent pom
+  - improve maven-core dependency definition
 
 
 ## [1.0.7]
@@ -108,6 +144,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - This is just a dummy placeholder to make the parser of GHCICD/release-notes-from-changelog@v1 happy!
 -->
 
-[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.7..HEAD
+[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.8..HEAD
+[1.0.8]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.7..v1.0.8
 [1.0.7]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.6..v1.0.7
 [1.0.6]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.6
