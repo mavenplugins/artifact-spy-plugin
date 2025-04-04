@@ -11,7 +11,7 @@
   </parent>
 
   <artifactId>artifact-spy-plugin</artifactId>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Artifact Spy Plugin</name>
@@ -50,9 +50,15 @@
   </issueManagement>
 
   <properties>
-    <version.java>1.6</version.java>
-    <version.maven>3.3.9</version.maven>
-    <version.maven-plugin-plugin>3.4</version.maven-plugin-plugin>
+    <version.java>1.8</version.java>
+    <!-- MAVEN -->
+    <version.maven>3.8.1</version.maven>
+    <!-- Minimum Maven version to build this project: -->
+    <!-- 3.6.1 required since attribute child.project.url.inherit.append.path is being used. -->
+    <!-- 3.6.3 required by maven-plugin-plugin 3.13.1 -->
+    <maven.enforce.version.range>[3.6.3,)</maven.enforce.version.range>
+    <version.maven-plugin-plugin>3.13.1</version.maven-plugin-plugin>
+    <version.plexus-component-metadata>2.2.0</version.plexus-component-metadata>
   </properties>
 
   <dependencies>
@@ -100,12 +106,25 @@
         <version>${version.maven-plugin-plugin}</version>
         <configuration>
           <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+          <goalPrefix>artifact-spy</goalPrefix>
         </configuration>
         <executions>
           <execution>
             <id>mojo-descriptor</id>
             <goals>
               <goal>descriptor</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-component-metadata</artifactId>
+        <version>${version.plexus-component-metadata}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate-metadata</goal>
             </goals>
           </execution>
         </executions>

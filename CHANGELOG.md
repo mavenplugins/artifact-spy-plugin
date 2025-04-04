@@ -80,13 +80,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - TBD
 
 
-## [1.0.8]
+## [1.1.0]
 <!-- !!! Align version in badge URLs as well !!! -->
-[![1.0.8 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.8)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.8)
+[![1.1.0 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.1.0)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.1.0)
 
 ### Summary
 - Fix overriding POM artifact with a file built in a POM type project
 - Add logging of any artifact added
+
+### 💥 Breaking
+- Require Java 8 as a minimum
+- Maven core dependency updated 3.3.9 -> 3.8.1
+- Maven core dependency scope changed to `provided`
 
 ### 🐛 Fixes
 - Fix overriding POM artifact with a file built in a POM type project
@@ -100,6 +105,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - fix developer node contributors URL
   - refer to recent parent pom
   - improve maven-core dependency definition
+  - bump dependencies:
+    - `org.apache.maven:maven-core:3.3.9` -> `org.apache.maven:maven-core:3.8.1`, sscope `provided`
+    - `org.apache.maven.plugin-tools:maven-plugin-annotations:3.4` -> `org.apache.maven.plugin-tools:maven-plugin-annotations:3.13.1`
 
 
 ## [1.0.7]
@@ -144,7 +152,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - This is just a dummy placeholder to make the parser of GHCICD/release-notes-from-changelog@v1 happy!
 -->
 
-[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.8..HEAD
-[1.0.8]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.7..v1.0.8
+[Unreleased]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.1.0..HEAD
+[1.1.0]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.7..v1.1.0
 [1.0.7]: https://github.com/mavenplugins/artifact-spy-plugin/compare/v1.0.6..v1.0.7
 [1.0.6]: https://github.com/mavenplugins/artifact-spy-plugin/releases/tag/v1.0.6
