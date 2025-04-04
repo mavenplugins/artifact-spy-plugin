@@ -88,13 +88,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix overriding POM artifact with a file built in a POM type project
 - Add logging of any artifact added
 
-### 💥 Breaking
-- Require Java 8 as a minimum
-- Maven core dependency updated 3.3.9 -> 3.8.1
-- Maven core dependency scope changed to `provided`
-
 ### 🐛 Fixes
 - Fix overriding POM artifact with a file built in a POM type project
+
+### 💥 Breaking
+- Require Java 8 as a minimum
 
 ### ✨ Improvements
 - Add logging of any artifact being added
