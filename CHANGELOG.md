@@ -106,7 +106,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - refer to recent parent pom
   - improve maven-core dependency definition
   - bump dependencies:
-    - `org.apache.maven:maven-core:3.3.9` -> `org.apache.maven:maven-core:3.8.1`, sscope `provided`
+    - `org.apache.maven:maven-core:3.3.9` -> `org.apache.maven:maven-core:3.8.1`, scope `provided`
     - `org.apache.maven.plugin-tools:maven-plugin-annotations:3.4` -> `org.apache.maven.plugin-tools:maven-plugin-annotations:3.13.1`
 
 
