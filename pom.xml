@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -13,7 +15,10 @@
   <packaging>maven-plugin</packaging>
 
   <name>Artifact Spy Plugin</name>
-  <description>A small Maven plugin that spies out all the artifacts that are produced by a Maven build.</description>
+  <description>
+    A small Maven plugin that spies out all the artifacts that are produced by a Maven build.
+    RA patch of version 1.0.7 to fix POM artifact overriding issue.
+  </description>
   <url>https://github.com/mavenplugins/artifact-spy-plugin</url>
   <inceptionYear>2016</inceptionYear>
 
@@ -39,7 +44,7 @@
   <scm>
     <connection>scm:git:https://github.com/mavenplugins/artifact-spy-plugin.git</connection>
     <url>https://github.com/mavenplugins/artifact-spy-plugin</url>
-    <tag>v1.0.7</tag>
+    <tag>v1.0.7.patch-ra</tag>
   </scm>
 
   <issueManagement>
