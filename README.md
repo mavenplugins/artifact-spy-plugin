@@ -54,6 +54,7 @@ Sample output
     #
     #Wed Apr 27 08:51:13 CEST 2016
     com.itemis.maven.plugins\:cdi-plugin-utils\:jar\:1.0.0=target/cdi-plugin-utils-1.0.0.jar
+    com.itemis.maven.plugins\:cdi-plugin-utils\:pom\:1.0.0=pom.xml
     
 ### Project attaching an additional artifact
     #
