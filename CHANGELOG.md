@@ -82,7 +82,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.1.0]
 <!-- !!! Align version in badge URLs as well !!! -->
-[![1.1.0 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.1.0)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.1.0)
+[![1.1.0 Badge](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin?label=Maven%20Central&filter=1.1.0)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.1.0)
 
 ### Summary
 - Fix overriding POM artifact with a file built in a POM type project
@@ -110,7 +110,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.0.7]
 <!-- !!! Align version in badge URLs as well !!! -->
-[![1.0.7 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.7)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.7)
+[![1.0.7 Badge](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin?label=Maven%20Central&filter=1.0.7)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.7)
 
 ### Summary
 - No functional changes
@@ -124,7 +124,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.0.6]
 <!-- !!! Align version in badge URLs as well !!! -->
-[![1.0.6 Badge](https://img.shields.io/nexus/r/io.github.mavenplugins/artifact-spy-plugin?server=https://s01.oss.sonatype.org&label=Maven%20Central&queryOpt=:v=1.0.6)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.6)
+[![1.0.6 Badge](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin?label=Maven%20Central&filter=1.0.6)](https://central.sonatype.com/artifact/io.github.mavenplugins/artifact-spy-plugin/1.0.6)
 
 ### Summary
 - Initial release of this artifact with new groupId `io.github.mavenplugins`
