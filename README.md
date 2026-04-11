@@ -1,8 +1,9 @@
 Artifact Spy Plugin
 ===================
 [![Eclipse Public License](https://img.shields.io/github/license/mavenplugins/artifact-spy-plugin?label=License)](./LICENSE)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.mavenplugins/artifact-spy-plugin)
 [![CI](https://github.com/mavenplugins/artifact-spy-plugin/actions/workflows/build_and_deploy.yml/badge.svg)](https://github.com/mavenplugins/artifact-spy-plugin/actions/workflows/build_and_deploy.yml)
+[![Maven Central Snapshot](https://img.shields.io/maven-metadata/v?label=Maven%20Central%20Snapshot&metadataUrl=https%3A%2F%2Fcentral.sonatype.com%2Frepository%2Fmaven-snapshots%2Fio%2Fgithub%2Fmavenplugins%2Fartifact-spy-plugin%2Fmaven-metadata.xml)](https://central.sonatype.com/repository/maven-snapshots/io/github/mavenplugins/artifact-spy-plugin/maven-metadata.xml)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.mavenplugins/artifact-spy-plugin.svg?label=Maven%20Central&color=blue)](https://search.maven.org/artifact/io.github.mavenplugins/artifact-spy-plugin)
 
 The purpose of this plugin is to spy out the artifacts that are produced by a project build.
 It serializes the project artifact and all attached artifacts into a properties file with the following format:
