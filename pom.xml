@@ -55,7 +55,7 @@
     <!-- 3.6.1 required since attribute child.project.url.inherit.append.path is being used. -->
     <!-- 3.6.3 required by maven-plugin-plugin 3.13.1 -->
     <maven.enforce.version.range>[3.6.3,)</maven.enforce.version.range>
-    <version.maven-plugin-plugin>3.15.2</version.maven-plugin-plugin>
+    <version.maven-plugin-plugin>3.16.0</version.maven-plugin-plugin>
     <version.plexus-component-metadata>2.2.0</version.plexus-component-metadata>
   </properties>
 
